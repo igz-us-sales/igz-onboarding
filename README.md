@@ -1,9 +1,10 @@
 # Iguazio Onboarding Basic Demo
 
 ### Examples
-1. `mlrun_example.ipynb` - Runs `mlrun_fn.py` on K8s cluster with input parameters and logs value for experiment tracking
-2. `mlrun_mount_example.ipynb` - Runs `mlrun_mount_fn` on K8s cluster with input parameters and custom Python module mounted within container
-3. `nuclio_example.ipynb` - Deploys `nuclio_fn` on K8s cluster as a serverless function for real-time "inference"
+1. `1_mlrun_example.ipynb` - Runs `mlrun_fn.py` on K8s cluster with input parameters and logs value for experiment tracking
+2. `2_mlrun_mount_example.ipynb` - Runs `mlrun_mount_fn` on K8s cluster with input parameters and custom Python module mounted within container
+3. `3_mlrun_data_model_logging.ipynb` - Runs `mlrun_data_model_fn` on K8s cluster with input model and CSV file to demonstrate logging
+4. `4_nuclio_example.ipynb` - Deploys `nuclio_fn` on K8s cluster as a serverless function for real-time "inference"
 
 ### Documentation
 - Iguazio: https://www.iguazio.com/docs/latest-release/
