@@ -1,0 +1,48 @@
+kind: remote
+metadata:
+  name: my-rt
+  tag: ''
+  hash: be8d98fb5475b10da9cece4634c295b4981f208f
+  project: onboarding
+spec:
+  command: http://default-tenant.app.us-sales-staging.iguazio-cd2.com:32463
+  args: []
+  image: mlrun/mlrun
+  description: ''
+  min_replicas: 1
+  max_replicas: 4
+  env:
+  - name: V3IO_API
+    value: ''
+  - name: V3IO_USERNAME
+    value: ''
+  - name: V3IO_ACCESS_KEY
+    value: ''
+  - name: V3IO_FRAMESD
+    value: ''
+  base_spec:
+    apiVersion: nuclio.io/v1
+    kind: Function
+    metadata:
+      name: my-rt
+      labels: {}
+      annotations:
+        nuclio.io/generated_by: function generated from assets/rt.py
+    spec:
+      runtime: python:3.6
+      handler: rt:handler
+      env: []
+      volumes: []
+      build:
+        commands: []
+        noBaseImagesPull: true
+        functionSourceCode: aW1wb3J0IHJhbmRvbQoKZGVmIGhhbmRsZXIoY29udGV4dCwgZXZlbnQpOgogICAgcmV0dXJuIHsicmVzdWx0IiA6IHN0cihyYW5kb20ucmFuZG9tKCkpfQ==
+  source: ''
+  build:
+    commands: []
+    code_origin: https://github.com/igz-us-sales/igz-onboarding.git#864def8ef687ecfe1d142e1a6224319829a781d9:assets/rt.py
+    origin_filename: assets/rt.py
+  default_handler: handler
+  disable_auto_mount: false
+  affinity: null
+verbose: false
